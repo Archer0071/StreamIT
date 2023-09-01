@@ -1,8 +1,8 @@
 import subprocess
 import ffmpeg
 # Video encoding parameters
-input_file = '/Users/archer/Desktop/StreamIT/demo/example_video.mp4'
-output_directory = '/Users/archer/Desktop/StreamIT/output'
+input_file = 'demo/example_video.mp4'
+output_directory = 'output'
 bitrates = [1000, 2000, 4000]  # Bitrates in kbps
 resolutions = [(640, 360), (1280, 720), (1920, 1080)]  # Resolutions (width, height) in pixels
 
