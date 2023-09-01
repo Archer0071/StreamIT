@@ -1,0 +1,86 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #f2f2f2; /* Set the background color */
+    overflow: hidden;
+}
+
+.container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card {
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Add shadow */
+    background-color: #fff;
+    overflow: hidden;
+    width: calc(100vw * 0.75); /* 75% of viewport width (4/3 of 100%) */
+    height: calc(100vw * 0.75 * 3 / 4); /* 4/3 aspect ratio */
+    max-width: 400px; /* Limit the maximum width to 400px */
+    max-height: 300px; /* Limit the maximum height to 300px */
+}
+
+.video-container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    border: 2px dashed #ccc;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+video {
+    width: 100%;
+    height: 100%;
+}
+
+.video-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 18px;
+    color: #333;
+    font-weight: bold;
+    pointer-events: none;
+    opacity: 0; /* Initially set to invisible */
+    animation: fadeIn 0.5s forwards; /* Fade-in animation */
+}
+
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+    }
+}
+
+.drag-over {
+    border-color: #3498db;
+}
+
+.pulsate {
+    animation: pulsate 1.5s ease-out infinite;
+}
+
+@keyframes pulsate {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.2);
+    }
+    100% {
+        transform: scale(1);
+    }
+}

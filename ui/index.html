@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Drag and Drop Videos</title>
+    <link rel="stylesheet" href="styles.css">
+    <!-- Add the htmx library from the CDN -->
+    <script src="https://unpkg.com/htmx.org@0.5.2/dist/htmx.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <div class="video-container" draggable="true" hx-drop="onDropVideo(event)">
+            <video controls>
+                <source src="path/to/your/video.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+            <div class="video-overlay">Drag and drop video here</div>
+        </div>
+    </div>
+</body>
+</html>
