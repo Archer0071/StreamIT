@@ -21,7 +21,7 @@ for i, (width, height) in enumerate(resolutions):
         '-y',
         output_file
     ])
-
+# this for testing
 # Generate the streaming manifest (M3U8 for HLS)
 manifest_file = f'{output_directory}/playlist.m3u8'
 with open(manifest_file, 'w') as f:
